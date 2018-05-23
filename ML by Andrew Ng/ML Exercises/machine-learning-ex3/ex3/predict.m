@@ -21,13 +21,23 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+% X is a 5000*400 vector
+% Add ones to the X data matrix
+X = [ones(m, 1) X]; % X is now a 5000*401 vector
 
+% Theta1 is a 25*401 vector
+z2 = Theta1*X'; % z2 is a 25*5000 vector
+a2 = sigmoid(z2); 
+a2 = a2'; % a2 is now 5000*25
 
+% Theta2 is a 10*26 vector
+a2 = [ones(m, 1) a2]; % a2 is now a 5000*26 vector
+z3 = Theta2*a2'; % z3 is a 10*5000 vector
+a3 = sigmoid(z3); 
+a3 = a3'; % a3 is now a 5000*10 vector
 
-
-
-
-
+% y is a 5000*1 vector
+[prob, p] = max(a3, [], 2); % prob is 5000*1 vector
 
 % =========================================================================
 
