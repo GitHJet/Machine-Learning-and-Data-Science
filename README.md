@@ -10,6 +10,7 @@
 - [ ] [Kaggle Learn Resources (ML, Pandas, ...)](https://kaggle.com/learn)
 
 - [ ] [Coursera Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
+Currently doing - Week 8/11
 
 - [ ] [Coursera deeplearning.ai by Andrew Ng](https://www.coursera.org/specializations/deep-learning)
 
