@@ -35,7 +35,9 @@ Currently doing - Week 8/11
 ---
 ## Others
 
-[Finding Eigenvalues and Eigenvectors](https://www.scss.tcd.ie/~dahyotr/CS1BA1/SolutionEigen.pdf) (For understanding principal component analysis)
+[Variance-Covariance Matrix](https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc541.htm) (For understanding principal component analysis)
+
+[Finding Eigenvalues and Eigenvectors](https://www.scss.tcd.ie/~dahyotr/CS1BA1/SolutionEigen.pdf) (For understanding PCA)
 
 [Singular Value Decomposition](http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition.htm) (For understanding PCA)
 
