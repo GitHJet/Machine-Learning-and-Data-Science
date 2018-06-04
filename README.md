@@ -35,6 +35,6 @@ Currently doing - Week 8/11
 ---
 ## Others
 
-[Finding Eigenvalues and Eigenvectors](https://www.scss.tcd.ie/~dahyotr/CS1BA1/SolutionEigen.pdf)
+[Finding Eigenvalues and Eigenvectors](https://www.scss.tcd.ie/~dahyotr/CS1BA1/SolutionEigen.pdf) (For understanding principal component analysis)
 
 [Formatting Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
