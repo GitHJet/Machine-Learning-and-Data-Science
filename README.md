@@ -37,4 +37,6 @@ Currently doing - Week 8/11
 
 [Finding Eigenvalues and Eigenvectors](https://www.scss.tcd.ie/~dahyotr/CS1BA1/SolutionEigen.pdf) (For understanding principal component analysis)
 
+[Singular Value Decomposition](http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition.htm) (For understanding PCA)
+
 [Formatting Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
