@@ -1,4 +1,4 @@
-# Machine-Learning-and-Data-Science
+# Machine-Learning
 
 - [ ] Currently doing/ not started yet
 - [x] Completed
