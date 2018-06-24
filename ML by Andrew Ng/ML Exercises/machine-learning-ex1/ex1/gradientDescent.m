@@ -8,6 +8,8 @@ m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
 learning_rate = 0.3;
 
+% Testing
+
 for iter = 1:num_iters
 
     % ====================== YOUR CODE HERE ======================
