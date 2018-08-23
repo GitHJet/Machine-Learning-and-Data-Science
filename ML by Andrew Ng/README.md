@@ -17,4 +17,4 @@ Practiced applications on:
 3. **Computer vision**
 4. Medical informatics, audio, database mining, and other areas.
 
-Click the ML Exercises sub-directory to read a summary of my work.
+Click the *ML Exercises* sub-directory to read a summary of my work.
