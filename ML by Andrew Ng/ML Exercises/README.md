@@ -7,6 +7,7 @@ Learning Points:
 2. Feature normalization implementation
 3. Gradient descent step implementation
 4. Selecting learning rates
+5. Normal equation
 
 **Cost function, J**
 
@@ -23,3 +24,8 @@ Learning Points:
 **Learning rate**
 
 Gradient descent converges slowly if learning rate is small, and does not converge/diverge if learning rate is too big.
+
+**Normal equation**
+
+`theta = (pinv(X'*X)) * (X'*y)`
+Normal equation exactly calculates theta and does not require feature normalization. Slow if n is too larg, eg. n > 10,000.
