@@ -164,4 +164,12 @@ W = rand(L_out, 1 + L_in) * 2 * epsilon_init - epsilon_init;
 ```
 One effective strategy for choosing ϵ_init is to base it on the number of units in the network. A good choice of ϵ_init is ϵ_init=6√(L_in−L_out), where L_in=sl and L_out=sl+1 are the number of units in the layers adjacent to Θ(l).
 
+## Week 5 - Regularized Linear Regression and Bias v.s. Variance
 
+Learning Points:
+1. Bias-variance tradeoff
+
+**Bias-variance tradeoff**
+
+Models with high bias are not complex enough for the data and tend to underfit, while models with high variance tend to overfit the training data.
+If both train error and cross validation error are high when number of training example increases, there is a high bias problem in the model.
