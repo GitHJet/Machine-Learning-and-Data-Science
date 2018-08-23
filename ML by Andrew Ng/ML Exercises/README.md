@@ -3,17 +3,17 @@
 ## Week 1
 
 Learning Points:
-1. Cost function implementation
+1. Linear regression cost function implementation
 2. Feature normalization implementation
 3. Gradient descent step implementation
 4. Selecting learning rates
 5. Normal equation
 
-**Cost function, J**
+**Linear regression cost function, J**
 
 `J = 1/2m * sum(sqrErrors), where sqrErrors = (X*theta - y).^2`
 
-**Feature normalize X**
+**Feature normalization of X**
 
 `X = (X .- mean(X)) ./ std(X)`
 
@@ -29,3 +29,24 @@ Gradient descent converges slowly if learning rate is small, and does not conver
 
 `theta = (pinv(X'*X)) * (X'*y)`
 Normal equation exactly calculates theta and does not require feature normalization. Slow if n is too larg, eg. n > 10,000.
+
+## Week 2
+
+Learning Points:
+1. Sigmoid function
+2. Logreg cost function and gradient
+
+**Sigmoid function**
+
+`sigmoid(z) = 1 ./ (1 + e.^(-z))`
+
+**Logreg cost function and gradient**
+```
+h = sigmoid(X*theta)
+J = 1/m * (-y' * log(h) - (1-y)' * log(1-h))
+grad = 1/m * X' * (h - y)
+```
+
+**Derivation of sigmoid function gradient, expressed as a function of the function value** (only σ(x), but not x, is present)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\LARGE&space;\begin{align*}\sigma(x)'&=\left(\frac{1}{1&plus;e^{-x}}\right)'=\frac{-(1&plus;e^{-x})'}{(1&plus;e^{-x})^2}=\frac{-1'-(e^{-x})'}{(1&plus;e^{-x})^2}=\frac{0-(-x)'(e^{-x})}{(1&plus;e^{-x})^2}=\frac{-(-1)(e^{-x})}{(1&plus;e^{-x})^2}=\frac{e^{-x}}{(1&plus;e^{-x})^2}&space;\newline&space;&=\left(\frac{1}{1&plus;e^{-x}}\right)\left(\frac{e^{-x}}{1&plus;e^{-x}}\right)=\sigma(x)\left(\frac{&plus;1-1&space;&plus;&space;e^{-x}}{1&plus;e^{-x}}\right)=\sigma(x)\left(\frac{1&space;&plus;&space;e^{-x}}{1&plus;e^{-x}}&space;-&space;\frac{1}{1&plus;e^{-x}}\right)=\sigma(x)(1&space;-&space;\sigma(x))\end{align*}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\LARGE&space;\begin{align*}\sigma(x)'&=\left(\frac{1}{1&plus;e^{-x}}\right)'=\frac{-(1&plus;e^{-x})'}{(1&plus;e^{-x})^2}=\frac{-1'-(e^{-x})'}{(1&plus;e^{-x})^2}=\frac{0-(-x)'(e^{-x})}{(1&plus;e^{-x})^2}=\frac{-(-1)(e^{-x})}{(1&plus;e^{-x})^2}=\frac{e^{-x}}{(1&plus;e^{-x})^2}&space;\newline&space;&=\left(\frac{1}{1&plus;e^{-x}}\right)\left(\frac{e^{-x}}{1&plus;e^{-x}}\right)=\sigma(x)\left(\frac{&plus;1-1&space;&plus;&space;e^{-x}}{1&plus;e^{-x}}\right)=\sigma(x)\left(\frac{1&space;&plus;&space;e^{-x}}{1&plus;e^{-x}}&space;-&space;\frac{1}{1&plus;e^{-x}}\right)=\sigma(x)(1&space;-&space;\sigma(x))\end{align*}" title="\LARGE \begin{align*}\sigma(x)'&=\left(\frac{1}{1+e^{-x}}\right)'=\frac{-(1+e^{-x})'}{(1+e^{-x})^2}=\frac{-1'-(e^{-x})'}{(1+e^{-x})^2}=\frac{0-(-x)'(e^{-x})}{(1+e^{-x})^2}=\frac{-(-1)(e^{-x})}{(1+e^{-x})^2}=\frac{e^{-x}}{(1+e^{-x})^2} \newline &=\left(\frac{1}{1+e^{-x}}\right)\left(\frac{e^{-x}}{1+e^{-x}}\right)=\sigma(x)\left(\frac{+1-1 + e^{-x}}{1+e^{-x}}\right)=\sigma(x)\left(\frac{1 + e^{-x}}{1+e^{-x}} - \frac{1}{1+e^{-x}}\right)=\sigma(x)(1 - \sigma(x))\end{align*}" /></a>
