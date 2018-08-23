@@ -11,15 +11,15 @@ Learning Points:
 
 **Linear regression cost function, J**
 
-`J = 1/2m * sum(sqrErrors), where sqrErrors = (X*theta - y).^2`
+`J = 1/2m * sum(sqrErrors), where sqrErrors = (X*theta - y).^2;`
 
 **Feature normalization of X**
 
-`X = (X .- mean(X)) ./ std(X)`
+`X = (X .- mean(X)) ./ std(X);`
 
 **Gradient descent single step**
 
-`theta = theta - alpha * partial_derivation(J) = theta - alpha * 1/m * X' * (X*theta - y) (Vectorized)`
+`theta = theta - alpha * partial_derivation(J) = theta - alpha * 1/m * X' * (X*theta - y); (Vectorized)`
 
 **Learning rate**
 
@@ -27,7 +27,7 @@ Gradient descent converges slowly if learning rate is small, and does not conver
 
 **Normal equation**
 
-`theta = (pinv(X'*X)) * (X'*y)`
+`theta = (pinv(X'*X)) * (X'*y);`
 Normal equation exactly calculates theta and does not require feature normalization. Slow if n is too larg, eg. n > 10,000.
 
 ## Week 2
@@ -35,17 +35,28 @@ Normal equation exactly calculates theta and does not require feature normalizat
 Learning Points:
 1. Sigmoid function
 2. Logreg cost function and gradient
+3. Regularized logreg cost function
 
 **Sigmoid function**
 
-`sigmoid(z) = 1 ./ (1 + e.^(-z))`
+`sigmoid(z) = 1 ./ (1 + e.^(-z));`
 
 **Logreg cost function and gradient**
 ```
-h = sigmoid(X*theta)
-J = 1/m * (-y' * log(h) - (1-y)' * log(1-h))
-grad = 1/m * X' * (h - y)
+h = sigmoid(X*theta);
+J = 1/m * (-y' * log(h) - (1-y)' * log(1-h));
+grad = 1/m * X' * (h - y);
 ```
+**Regularized logreg cost function**
+```
+h = sigmoid(X*theta);
+J = 1/m * (-y' * log(h) - (1-y)' * log(1-h));
+theta(1) = 0; % This prevents regularization of theta0 (Matlab indexing starts at 1)
+J = J + lambda/(2*m) * sum(theta'*theta);
+grad = 1/m * X' * (h - y) + lambda/m * theta; %
+```
+
+
 
 **Derivation of sigmoid function gradient, expressed as a function of the function value** (only σ(x), but not x, is present)
 
