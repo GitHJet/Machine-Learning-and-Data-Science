@@ -28,7 +28,9 @@ Gradient descent converges slowly if learning rate is small, and does not conver
 **Normal equation**
 
 `theta = (pinv(X'*X)) * (X'*y);`
+
 Normal equation exactly calculates theta and does not require feature normalization. Slow if n is too larg, eg. n > 10,000.
+
 
 ## Week 2
 
@@ -36,6 +38,7 @@ Learning Points:
 1. Sigmoid function
 2. Logreg cost function and gradient
 3. Regularized logreg cost function
+4. Regularization and overfitting
 
 **Sigmoid function**
 
@@ -55,6 +58,13 @@ theta(1) = 0; % This prevents regularization of theta0 (Matlab indexing starts a
 J = J + lambda/(2*m) * sum(theta'*theta);
 grad = 1/m * X' * (h - y) + lambda/m * theta; %
 ```
+**Regularization and overfitting**
+
+No regularization (lambda=0) causes overfitting while too much regularization (lambda=100) causes underfitting.
+
+
+## Week 3
+
 
 
 
