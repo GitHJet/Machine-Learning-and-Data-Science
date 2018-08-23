@@ -65,6 +65,19 @@ No regularization (lambda=0) causes overfitting while too much regularization (l
 
 ## Week 3
 
+Learning Points:
+1. Vectorization makes code faster than looping
+2. One-vs-all/Multi-class classification
+3. Logistic regression vs neural networks
+
+**One-vs-all/Multi-class classification**
+
+Train each classifier independently using a for-loop from 1 to K.
+
+**Logistic regression vs neural networks**
+
+Logistic regression cannot form complex hypotheses like neural networks because it is a linear classifier.
+
 
 
 
