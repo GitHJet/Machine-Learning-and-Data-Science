@@ -1,4 +1,4 @@
-### Assignments and Learning Points
+### Learning Points from Assignments
 
 ## Week 1
 
@@ -69,6 +69,7 @@ Learning Points:
 1. Vectorization makes code faster than looping
 2. One-vs-all/Multi-class classification
 3. Logistic regression vs neural networks
+4. Feedforward propagation and prediction
 
 **One-vs-all/Multi-class classification**
 
@@ -77,6 +78,28 @@ Train each classifier independently using a for-loop from 1 to K.
 **Logistic regression vs neural networks**
 
 Logistic regression cannot form complex hypotheses like neural networks because it is a linear classifier.
+
+**Feedforward propagation and prediction**
+```
+% X is a vector of inputs.
+% Add ones to the X data matrix
+X = [ones(m, 1) X];
+
+% Theta1 is a vector of theta to map input layer to hidden layer.
+z2 = Theta1*X'; 
+a2 = sigmoid(z2); 
+a2 = a2';
+
+% Theta2 is a vector of theta to map hidden layer to final layer.
+a2 = [ones(m, 1) a2];
+z3 = Theta2*a2';
+a3 = sigmoid(z3); 
+a3 = a3';
+
+% p is the prediction, the choice with the highest probability.
+[prob, p] = max(a3, [], 2);
+```
+
 
 
 
