@@ -17,6 +17,8 @@ Practiced applications on:
 3. **Computer vision**
 4. Medical informatics, audio, database mining, and other areas.
 
+Click [here](/MLExercises.md) to read a summary of my work.
+
 
 Derive the gradients of the sigmoid function and show that it can be rewritten as a function
 of the function value (i.e., in some expression where only σ(x), but not x, is present)
